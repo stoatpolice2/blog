@@ -19,10 +19,11 @@
     <meta property="og:image" content="https://stoatpolice2.github.io/blog/images/ogp.png">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- 丸みと爽やかさのあるWebフォント -->
+    <!-- Google Fonts（Kiwi Maru と M PLUS Rounded 1c） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500;700&family=M+PLUS+Rounded+1c:wght@500;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --navy-primary: #1e3a8a;
@@ -37,12 +38,16 @@
             --radius-lg: 18px;
             --radius-md: 12px;
             --radius-full: 9999px;
+            
+            /* 新しく設定したフォント変数（Kiwi Maru優先） */
+            --font-pop: 'Kiwi Maru', 'M PLUS Rounded 1c', 'Plus Jakarta Sans', sans-serif;
         }
 
         * { box-sizing: border-box; }
         
         body {
-            font-family: 'M PLUS Rounded 1c', 'Plus Jakarta Sans', -apple-system, sans-serif;
+            /* ページ全体のベースフォントを変更 */
+            font-family: var(--font-pop);
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -61,6 +66,7 @@
             margin-bottom: 24px;
         }
         .site-title {
+            font-family: var(--font-pop);
             font-size: 1.35rem;
             font-weight: 800;
             letter-spacing: 0.03em;
@@ -92,6 +98,7 @@
             box-shadow: 3px 3px 0px var(--yellow-accent);
         }
         .top-tags-title {
+            font-family: var(--font-pop);
             font-size: 0.8rem;
             font-weight: 800;
             color: var(--navy-primary);
@@ -105,6 +112,7 @@
             gap: 8px;
         }
         .top-tag-item {
+            font-family: var(--font-pop);
             font-size: 0.8rem;
             font-weight: 700;
             color: var(--navy-primary);
@@ -126,6 +134,7 @@
             margin-bottom: 24px;
         }
         .page-subtitle {
+            font-family: var(--font-pop);
             font-size: 1.35rem;
             font-weight: 800;
             color: var(--navy-primary);
@@ -164,6 +173,7 @@
         }
         .post-date {
             display: inline-block;
+            font-family: var(--font-pop);
             font-size: 0.78rem;
             color: var(--navy-primary);
             background: var(--yellow-light);
@@ -174,6 +184,7 @@
             border: 1px solid var(--yellow-accent);
         }
         .post-title {
+            font-family: var(--font-pop);
             margin: 0;
             font-size: 1.15rem;
             font-weight: 800;
@@ -224,6 +235,7 @@
 
         /* Markdown本文の見出し・コードブロック・画像装飾 */
         .post-content-inner h1, .post-content-inner h2, .post-content-inner h3 {
+            font-family: var(--font-pop);
             color: var(--navy-primary);
             font-weight: 800;
             margin-top: 1.4em;
@@ -254,6 +266,7 @@
         /* 記事内タグ */
         .tags-container { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
         .tag-label {
+            font-family: var(--font-pop);
             font-size: 0.75rem;
             font-weight: 700;
             color: var(--navy-primary);
@@ -276,6 +289,7 @@
             margin-top: 40px;
         }
         .pagination-btn {
+            font-family: var(--font-pop);
             padding: 10px 20px;
             font-size: 0.85rem;
             font-weight: 700;
@@ -356,7 +370,7 @@
 
         <nav class="pagination">
             <div><span class="pagination-btn disabled">← 新しい記事</span></div>
-            <div style="font-size: 0.9rem; font-weight: 700; color: var(--navy-primary);">1 / 1</div>
+            <div style="font-family: var(--font-pop); font-size: 0.9rem; font-weight: 700; color: var(--navy-primary);">1 / 1</div>
             <div><span class="pagination-btn disabled">古い記事 →</span></div>
         </nav>
     </div>
